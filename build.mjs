@@ -15,7 +15,7 @@ export async function buildFeaturePackage(pkg,directory){
  const path=join(directory,`${pkg.manifest.id}.vitalk-feature.json`);
  const sha256=createHash('sha256').update(bytes).digest('hex');
  await writeFile(path,bytes);await writeFile(path+'.sha256',sha256+'\n');
- return {path,sha256};
+ return {path,sha256,url:`/plugins/${pkg.manifest.id}.vitalk-feature.json`};
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))
  console.log(await buildFeaturePackage(definition,fileURLToPath(new URL('./dist/',import.meta.url))));
