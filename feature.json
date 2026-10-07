@@ -3,7 +3,7 @@
   "manifest": {
     "id": "vitalk.voice-send",
     "name": "语音发送",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "sdkVersion": 1,
     "description": "保留 voice2Send 原界面：通过快捷键说出对象和内容，在浮窗确认后发送；管理表达偏好、对象热词及飞书连接。",
     "permissions": [
